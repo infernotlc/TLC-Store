@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "955517105688",
+    "project_id": "final-2ce1d",
+    "storage_bucket": "final-2ce1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955517105688:android:58a06924907708c1c1f56d",
+        "android_client_info": {
+          "package_name": "com.tlh.afinal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-EE50YEdslwUgJUSn9L9ah32nb6OgEMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
