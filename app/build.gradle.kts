@@ -13,6 +13,10 @@ android {
     namespace = "com.tlh.afinal"
     compileSdk = 34
 
+    buildFeatures {
+        dataBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.tlh.afinal"
         minSdk = 24
@@ -46,11 +50,12 @@ android {
     }
     buildFeatures {
         viewBinding = true
+
     }
 }
 
 dependencies {
-    implementation("com.google.accompanist:accompanist-permissions:0.30.1")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -70,6 +75,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //permission
+    implementation("com.google.accompanist:accompanist-permissions:0.30.1")
+
     // Jetpack Compose
     implementation ("androidx.compose.material:material:1.6.8")
     implementation ("androidx.compose.compiler:compiler:1.5.14")
@@ -79,7 +87,8 @@ dependencies {
     //compose navigation
     implementation("androidx.navigation:navigation-compose:2.7.7")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
-    //navigation
+
+
     val nav_version = "2.7.7"
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
@@ -90,11 +99,14 @@ dependencies {
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
     ksp("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
 
     //retrofit
     val retrofit_Version = "2.8.1"
     implementation("com.squareup.retrofit2:retrofit:$retrofit_Version")
     implementation("com.google.code.gson:gson:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
 
     //glide
     implementation("com.github.bumptech.glide:glide:4.16.0")

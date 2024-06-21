@@ -30,13 +30,9 @@ import com.google.accompanist.permissions.isGranted
 import com.google.accompanist.permissions.rememberPermissionState
 import com.google.accompanist.permissions.shouldShowRationale
 import android.Manifest
-import androidx.navigation.NavController
-import androidx.navigation.fragment.fragment
-
 import com.tlh.afinal.common.composable.PermissionDialog
 import com.tlh.afinal.common.composable.RationaleDialog
 import com.tlh.afinal.common.snackbar.SnackbarManager
-import com.tlh.afinal.screens.home.HomeScreen
 import com.tlh.afinal.screens.login.LoginScreen
 import com.tlh.afinal.screens.settings.SettingsScreen
 import com.tlh.afinal.screens.sign_up.SignUpScreen
@@ -131,8 +127,5 @@ fun NavGraphBuilder.finalgraph(appState: FinalAppState) {
         SignUpScreen(openAndPopUp = { route, popUp -> appState.navigateAndPopUp(route, popUp) })
     }
 
-    fragment<HomeScreen>(HOME_SCREEN) {
 
-        HomeScreen()
-    }
 }

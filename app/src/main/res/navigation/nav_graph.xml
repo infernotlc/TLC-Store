@@ -3,19 +3,79 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginScreen">
-
-    <composable
-        android:id="@+id/loginScreen"
-        android:name="com.example.LoginScreen" >
-        <action
-            android:id="@+id/action_loginScreen_to_homeScreen"
-            app:destination="@id/homeScreen" />
-    </composable>
+    app:startDestination="@id/homeScreenFragment">
     <fragment
-        android:id="@+id/homeScreen"
-        android:name="com.tlh.afinal.screens.home.HomeScreen"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/homeScreenFragment"
+        android:name="com.tlh.afinal.screens.in_app.home.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.tlh.afinal.screens.in_app.home.ProductDetailFragment"
+        android:label="ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail">
+        <argument android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.tlh.afinal.screens.in_app.categories.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_categorieProductsFragment2"
+            app:destination="@id/categorieProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="com.tlh.afinal.screens.in_app.my_orders.MyOrdersFragment"
+        android:label="fragment_my_orders"
+        tools:layout="@layout/fragment_my_orders" />
+    <fragment
+        android:id="@+id/favoriteProductsFragment"
+        android:name="com.tlh.afinal.screens.in_app.favorite_products.FavoriteProductsFragment"
+        android:label="fragment_favorite_products"
+        tools:layout="@layout/fragment_favorite_products" >
+        <action
+            android:id="@+id/action_favoriteProductsFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <argument android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchProductFragment"
+        android:name="com.tlh.afinal.screens.in_app.search_product.SearchProductFragment"
+        android:label="fragment_search_product"
+        tools:layout="@layout/fragment_search_product" >
+        <action
+            android:id="@+id/action_searchProductFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <argument android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.tlh.afinal.screens.in_app.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/categorieProductsFragment"
+        android:name="com.tlh.afinal.screens.in_app.categories.CategoryProductsFragment"
+        android:label="fragment_categorie_products"
+        tools:layout="@layout/fragment_category_products" >
+        <action
+            android:id="@+id/action_categorieProductsFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <argument android:name="slug"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.tlh.afinal.screens.in_app.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
 </navigation>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="@string/main_page" />
+
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/baseline_drag_indicator_24"
+            android:title="@string/categories" />
+
+        <item
+            android:id="@+id/nav_searchprod"
+            android:icon="@drawable/baseline_saved_search_24"
+            android:title="@string/search_product" />
+
+        <item
+            android:id="@+id/nav_favprod"
+            android:icon="@drawable/heart"
+            android:title="@string/favorite_products" />
+
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_check"
+            android:title="@string/my_orders" />
+
+    </group>
+
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/baseline_self_improvement_24"
+                android:title="@string/profile" />
+            <item
+                android:id="@+id/nav_cart"
+                android:icon="@drawable/baseline_shopping_cart_24"
+                android:title="Cart" />
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_exit"
+                android:title="Exit"/>
+
+        </menu>
+    </item>
+</menu>

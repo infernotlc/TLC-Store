@@ -1,23 +1,31 @@
 package com.tlh.afinal.screens.login
 
+
+import android.content.Intent
 import androidx.compose.runtime.mutableStateOf
-import com.tlh.afinal.HOME_SCREEN
-import com.tlh.afinal.LOGIN_SCREEN
-import com.tlh.afinal.SETTINGS_SCREEN
+import com.tlh.afinal.SecondActivity
 import com.tlh.afinal.common.ext.isValidEmail
 import com.tlh.afinal.common.snackbar.SnackbarManager
 import com.tlh.afinal.model.service.AccountService
 import com.tlh.afinal.model.service.LogService
 import com.tlh.afinal.screens.FinalViewModel
+
 import dagger.hilt.android.lifecycle.HiltViewModel
+
+import dagger.hilt.android.qualifiers.ApplicationContext
+
 import javax.inject.Inject
+
 import com.tlh.afinal.R.string as AppText
+
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(
+    @ApplicationContext private val appContext: android.content.Context,
     private val accountService: AccountService,
-    logService: LogService
-) : FinalViewModel(logService) {
+    logService: LogService,
+
+    ) : FinalViewModel(logService) {
     var uiState = mutableStateOf(LoginUiState())
         private set
 
@@ -47,10 +55,16 @@ class LoginViewModel @Inject constructor(
 
         launchCatching {
             accountService.authenticate(email, password)
-            openAndPopUp(HOME_SCREEN, LOGIN_SCREEN)
+
+            // Navigate to SecondActivity
+            val intent = Intent(appContext, SecondActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            appContext.startActivity(intent)
+
         }
     }
 
+    //password recovery
     fun onForgotPasswordClick() {
         if (!email.isValidEmail()) {
             SnackbarManager.showMessage(AppText.email_error)
