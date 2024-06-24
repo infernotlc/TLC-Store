@@ -10,6 +10,8 @@ class ProductRepository @Inject constructor(private val apiService: ProductAPISe
     private val _products = MutableLiveData<List<Product>>()
     val products: LiveData<List<Product>> get() = _products
 
+
+
     suspend fun fetchProductsFromNetwork() {
         try {
             val response = apiService.getData()

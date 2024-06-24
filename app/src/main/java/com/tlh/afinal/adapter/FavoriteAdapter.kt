@@ -62,7 +62,7 @@ class FavoriteAdapter(
             titleTextView.text = product.title
             priceTextView.text = product.price.toString()
             discountTextView.text = product.discountPercentage.toString()
-            ratingtextview.text = product.rating.toString()
+            ratingTextView.text = product.rating.toString()
             Glide.with(holder.itemView).load(product.thumbnail).into(thumbnailImageView)
 
             // Handle the heart icon click

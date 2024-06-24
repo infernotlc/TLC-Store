@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.tlh.afinal.adapter.CategoryAdapter
 import com.tlh.afinal.databinding.FragmentCategoriesBinding
 import com.tlh.afinal.model.in_app_service.Category
-import com.tlh.afinal.model.in_app_service.Product
 import com.tlh.afinal.model.in_app_service.ProductAPI
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -43,6 +42,7 @@ class CategoriesFragment : Fragment() {
         adapter = CategoryAdapter(this::onCategoryClicked)
         binding.categoriesRecyclerView.adapter = adapter
         binding.categoriesRecyclerView.layoutManager = LinearLayoutManager(context)
+        binding.categoriesRecyclerView.visibility = View.VISIBLE
 
         fetchCategories()
     }
@@ -52,6 +52,7 @@ class CategoriesFragment : Fragment() {
             try {
                 val categories = productService.getCategories()
                 adapter.submitList(categories)
+                adapter.notifyDataSetChanged()
             } catch (e: Exception) {
                 Log.e(TAG, "Error fetching categories: ${e.message}", e)
                 Toast.makeText(context, "Error fetching categories", Toast.LENGTH_SHORT).show()

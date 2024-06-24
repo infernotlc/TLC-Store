@@ -17,9 +17,10 @@ class CategoryProductAdapter(private val onItemClick: (Product) -> Unit) :
         fun bind(product: Product) {
             binding.titleTextView.text = product.title
             binding.priceTextView.text = "${product.price} USD"
-            binding.ratingtextview.text = product.rating.toString()
+            binding.ratingTextView.text = product.rating.toString()
+            binding.discountTextView.text = "%${product.discountPercentage} OFF"
             binding.root.setOnClickListener { onItemClick(product) }
-            Glide.with(binding.imageView.context)
+            Glide.with(binding.ratingImageView.context)//
                 .load(product.thumbnail)
                 .into(binding.thumbnailImageView)
         }

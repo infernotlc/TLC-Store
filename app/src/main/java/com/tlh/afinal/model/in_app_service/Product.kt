@@ -12,7 +12,7 @@ data class Product(
     @SerializedName("discountPercentage") val discountPercentage: Double,
     val rating: Double,
     val stock: Int,
-    val tags: List<String>,//
+    val tags: List<String>,
     val brand: String,
     val sku: String,
     val weight: Int,
@@ -26,7 +26,8 @@ data class Product(
     val meta: Meta,
     val images: List<String>,
     val thumbnail: String,
-    var isFavorite: Boolean = false
+    var isFavorite: Boolean = false,
+    val quantity: Int
 )
 
 data class Dimensions(

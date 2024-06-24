@@ -28,6 +28,11 @@ interface ProductAPI {
     @GET("users/{id}")
     suspend fun getUser(@Path("id") userId: Int): Profile
 
+    //add to cart
     @POST("carts/add")
     suspend fun addToCart(@Body cartItem: CartItemRequest): CartResponse
+
+    //get orders by user
+    @GET("carts/user/{userId}")
+    suspend fun getOrdersByUser(@Path("userId") userId: Int): OrderResponse
 }

@@ -1,5 +1,7 @@
 package com.tlh.afinal.screens.in_app.cart
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -25,7 +27,7 @@ class CartViewModel @Inject constructor(
                 val response = cartRepository.addToCart(cartItem)
                 _cartResponse.value = response
             } catch (e: Exception) {
-                // Handle the error
+                Log.d(TAG, "addToCart: {${e.message}")
             }
         }
         return _cartResponse

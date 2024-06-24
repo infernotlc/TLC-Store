@@ -50,7 +50,7 @@ class SearchAdapter(private val fragment: Fragment) : ListAdapter<Product, Searc
             titleTextView.text = product.title
             priceTextView.text = "${product.price} USD"
             discountTextView.text = "${product.discountPercentage}% OFF"
-            ratingtextview.text = "Rating: ${product.rating}"
+            ratingTextView.text = "${product.rating}"
             Glide.with(holder.itemView).load(product.thumbnail).into(thumbnailImageView)
 
             // Handle the heart icon click

@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".SecondActivity"
-    android:background="@color/black"
     tools:openDrawer="start">
 
     <!-- Toolbar -->

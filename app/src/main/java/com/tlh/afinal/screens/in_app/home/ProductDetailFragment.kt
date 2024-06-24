@@ -8,8 +8,11 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.tlh.afinal.R
+import com.tlh.afinal.adapter.ReviewsAdapter
+import com.tlh.afinal.adapter.ViewPagerAdapter
 import com.tlh.afinal.databinding.FragmentProductDetailBinding
 import com.tlh.afinal.model.in_app_service.Product
 import com.tlh.afinal.model.in_app_service.ProductViewModel
@@ -78,7 +81,7 @@ class ProductDetailFragment : Fragment() {
         }
     }
 
-     fun bindProductDetails(product: Product) {
+    private fun bindProductDetails(product: Product) {
         binding.apply {
             title.text = product.title
             price.text = "${product.price} USD"
@@ -97,7 +100,15 @@ class ProductDetailFragment : Fragment() {
             returnPolicyTextView.text = "Return Policy: ${product.returnPolicy}"
             minimumOrderTextView.text = "Minimum Order: ${product.minimumOrderQuantity}"
             metaTextView.text = "Created at: ${product.meta.createdAt}, Updated at: ${product.meta.updatedAt}, Barcode: ${product.meta.barcode}"
-            Glide.with(this@ProductDetailFragment).load(product.thumbnail).into(imageView)
+
+            // Setup ViewPager for product images
+            val viewPagerAdapter = ViewPagerAdapter(product.images)
+            viewPager.adapter = viewPagerAdapter
+
+            // Setup RecyclerView for reviews
+            reviewRecyclerView.layoutManager = LinearLayoutManager(context)
+            val reviewsAdapter = ReviewsAdapter(product.reviews)
+            reviewRecyclerView.adapter = reviewsAdapter
         }
     }
 

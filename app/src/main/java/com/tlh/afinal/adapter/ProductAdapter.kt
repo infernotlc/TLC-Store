@@ -62,8 +62,8 @@ class ProductAdapter(
         holder.binding.apply {
             titleTextView.text = product.title
             priceTextView.text = "${product.price} USD"
-            discountTextView.text = product.discountPercentage.toString()
-            ratingtextview.text = product.rating.toString()
+            discountTextView.text = "%${product.discountPercentage} OFF"
+            ratingTextView.text = product.rating.toString()
             Glide.with(holder.itemView).load(product.thumbnail).into(thumbnailImageView)
 
             // Handle the heart icon click

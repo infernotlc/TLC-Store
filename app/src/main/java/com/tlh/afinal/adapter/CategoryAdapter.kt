@@ -41,4 +41,5 @@ class CategoryAdapter(private val onItemClick: (Category) -> Unit) :
         val category = getItem(position)
         holder.bind(category)
     }
+
 }

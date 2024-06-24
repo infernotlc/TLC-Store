@@ -4,7 +4,7 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     id("com.google.devtools.ksp")
     alias(libs.plugins.google.gms.google.services)
-    id ("dagger.hilt.android.plugin")
+    id("dagger.hilt.android.plugin")
     alias(libs.plugins.google.firebase.crashlytics)
     alias(libs.plugins.google.firebase.firebase.perf)
 }
@@ -70,20 +70,19 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.perf)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.firebase.firestore.ktx)
 
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 
     //permission
     implementation("com.google.accompanist:accompanist-permissions:0.30.1")
 
     // Jetpack Compose
-    implementation ("androidx.compose.material:material:1.6.8")
-    implementation ("androidx.compose.compiler:compiler:1.5.14")
-    implementation ("androidx.compose.ui:ui-tooling-preview:1.6.8")
-    implementation ("androidx.activity:activity-compose:1.9.0")
-    debugImplementation ("androidx.compose.ui:ui-tooling:1.6.8")
+    implementation("androidx.compose.material:material:1.6.8")
+    implementation("androidx.compose.compiler:compiler:1.5.14")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.6.8")
+    implementation("androidx.activity:activity-compose:1.9.0")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.6.8")
     //compose navigation
     implementation("androidx.navigation:navigation-compose:2.7.7")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
@@ -107,13 +106,27 @@ dependencies {
     implementation("com.google.code.gson:gson:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
-
     //glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    //viewpager
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
+
+
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.2")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.2")
+    implementation ("androidx.fragment:fragment-ktx:1.8.0")
 
     //hilt
     ksp(libs.hilt.android.compiler)
     implementation(libs.hilt.android)
-
+    //hilt testing
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.43.2")
+    androidTestImplementation("com.google.truth:truth:1.1.3")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 
 }

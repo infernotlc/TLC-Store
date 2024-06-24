@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class RoomViewModel @Inject constructor(
-    private val repository: ProductRepository
+    private val repository: RoomProductRepository
 ) : ViewModel() {
 
     val favoriteProducts: LiveData<List<ProductRoom>> = repository.favoriteProducts
