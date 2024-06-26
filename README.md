@@ -34,8 +34,33 @@
 <img src="https://github.com/hakanozer/tukcell_kotlin_2024/assets/70065773/f3aed052-5d05-4b57-ad7e-33ae0b1b1a8c" width="170" height="auto" alt="sendrecoverymail">
 <img src="https://github.com/hakanozer/tukcell_kotlin_2024/assets/70065773/bd4270e7-d94f-4859-8815-2f75debf5dff" width="170" height="auto" alt="testing">
 <img src="https://github.com/hakanozer/tukcell_kotlin_2024/assets/70065773/0b5fd424-1b2d-43e7-9893-e720d22c4fcd" width="170" height="auto" alt="tracing">
-
 </p>
+
+## :point_down: Structures 
+- Jetpack Compose
+- XML
+- SkydovesSpinner
+- Glide
+- Push Notification
+- Room
+- MVVM
+- Hilt
+- Coroutines
+- Flow
+- Retrofit
+- Clean Architecture
+- Material Design
+- Data Store
+- Pagination
+- Viewpager
+- Viewbinding-db
+- Compose Foundation
+- Gson
+- Firebase Authentication
+- Firebase Remote Config
+- Firebase FCM
+- Firebase Crashlytics
+- Firebase Performance
 
 
   
