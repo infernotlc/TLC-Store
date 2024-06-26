@@ -3,7 +3,7 @@
 ## 📸 Screenshots
 <p align="center">
   
- <img src="https://github.com/hakanozer/tukcell_kotlin_2024/assets/70065773/8494a425-ca08-4ce2-b5da-df8e69b82b4b" width="170" height="auto" alt="openingscreen">
+<img src="https://github.com/hakanozer/tukcell_kotlin_2024/assets/70065773/8494a425-ca08-4ce2-b5da-df8e69b82b4b" width="170" height="auto" alt="openingscreen">
 <img src="https://github.com/hakanozer/tukcell_kotlin_2024/assets/70065773/694dd9be-e9b1-4fbc-866c-12c3816e8f64" width="170" height="auto" alt="permissionreq">
 <img src="https://github.com/hakanozer/tukcell_kotlin_2024/assets/70065773/640eff8f-3969-4306-b6a8-bd2c6c04f4e4" width="170" height="auto" alt="notifexmp">
 <img src="https://github.com/hakanozer/tukcell_kotlin_2024/assets/70065773/6fde19b5-4707-4785-888d-6bc8c5c637f7" width="170" height="auto" alt="settingspage">
@@ -65,9 +65,7 @@
 - Firebase Analytics
 - Firebase Performance-Tracing
 - Google Permissions
+- Google Services
 - Animations
-- 
-
-
   
 ## 📽 Video 
