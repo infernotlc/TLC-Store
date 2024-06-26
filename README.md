@@ -36,8 +36,9 @@
 <img src="https://github.com/hakanozer/tukcell_kotlin_2024/assets/70065773/0b5fd424-1b2d-43e7-9893-e720d22c4fcd" width="170" height="auto" alt="tracing">
 </p>
 
-## :point_down: Structures 
+## 🍍: Components 
 - Jetpack Compose
+- Compose Navigation
 - XML
 - SkydovesSpinner
 - Glide
@@ -45,6 +46,7 @@
 - Room
 - MVVM
 - Hilt
+- Hilt Testing
 - Coroutines
 - Flow
 - Retrofit
@@ -60,7 +62,11 @@
 - Firebase Remote Config
 - Firebase FCM
 - Firebase Crashlytics
-- Firebase Performance
+- Firebase Analytics
+- Firebase Performance-Tracing
+- Google Permissions
+- Animations
+- 
 
 
   
