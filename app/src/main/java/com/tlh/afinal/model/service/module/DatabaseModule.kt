@@ -2,8 +2,8 @@ package com.tlh.afinal.model.service.module
 
 import android.content.Context
 import androidx.room.Room
-import com.tlh.afinal.room.AppDatabase
-import com.tlh.afinal.room.ProductDao
+import com.tlh.afinal.data.local.room.AppDatabase
+import com.tlh.afinal.data.local.room.ProductDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

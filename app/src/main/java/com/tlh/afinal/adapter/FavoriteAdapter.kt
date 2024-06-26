@@ -12,8 +12,8 @@ import com.bumptech.glide.Glide
 import com.tlh.afinal.R
 import com.tlh.afinal.databinding.ProductRecyclerRowBinding
 
-import com.tlh.afinal.room.ProductRoom
-import com.tlh.afinal.room.RoomViewModel
+import com.tlh.afinal.data.local.room.ProductRoom
+import com.tlh.afinal.data.local.room.RoomViewModel
 import com.tlh.afinal.screens.in_app.favorite_products.FavoriteProductsFragment
 import com.tlh.afinal.screens.in_app.favorite_products.FavoriteProductsFragmentDirections
 import com.tlh.afinal.screens.in_app.home.HomeScreenFragmentDirections
@@ -60,8 +60,8 @@ class FavoriteAdapter(
 
         holder.binding.apply {
             titleTextView.text = product.title
-            priceTextView.text = product.price.toString()
-            discountTextView.text = product.discountPercentage.toString()
+            priceTextView.text = "Only ${product.price} USD!!"
+            discountTextView.text = "${product.discountPercentage} OFF"
             ratingTextView.text = product.rating.toString()
             Glide.with(holder.itemView).load(product.thumbnail).into(thumbnailImageView)
 

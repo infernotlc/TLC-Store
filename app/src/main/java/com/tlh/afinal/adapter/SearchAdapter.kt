@@ -14,8 +14,8 @@ import com.bumptech.glide.Glide
 import com.tlh.afinal.R
 import com.tlh.afinal.databinding.ProductRecyclerRowBinding
 import com.tlh.afinal.model.in_app_service.Product
-import com.tlh.afinal.room.ProductRoom
-import com.tlh.afinal.room.RoomViewModel
+import com.tlh.afinal.data.local.room.ProductRoom
+import com.tlh.afinal.data.local.room.RoomViewModel
 import com.tlh.afinal.screens.in_app.search_product.SearchProductFragmentDirections
 import com.tlh.afinal.screens.in_app.search_product.SearchProductViewModel
 import dagger.hilt.android.AndroidEntryPoint

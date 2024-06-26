@@ -1,8 +1,8 @@
 package com.tlh.afinal.model.service.module
 
 import com.tlh.afinal.common.constants.Constants.BASE_URL
-import com.tlh.afinal.model.in_app_service.ProductAPI
-import com.tlh.afinal.model.in_app_service.ProductAPIService
+import com.tlh.afinal.data.remote.ProductAPI
+import com.tlh.afinal.data.remote.ProductAPIService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

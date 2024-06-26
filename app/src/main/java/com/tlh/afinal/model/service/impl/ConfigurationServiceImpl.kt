@@ -1,7 +1,6 @@
 package com.tlh.afinal.model.service.impl
 
 
-
 import com.google.firebase.BuildConfig
 import com.google.firebase.Firebase
 import com.google.firebase.remoteconfig.get
@@ -14,12 +13,15 @@ import javax.inject.Inject
 import com.tlh.afinal.R.xml as AppConfig
 
 class ConfigurationServiceImpl @Inject constructor() : ConfigurationService {
+
     private val remoteConfig
         get() = Firebase.remoteConfig
 
     init {
         if (BuildConfig.DEBUG) {
-            val configSettings = remoteConfigSettings { minimumFetchIntervalInSeconds = 0 }
+            val configSettings = remoteConfigSettings {
+                minimumFetchIntervalInSeconds = 0
+            }
             remoteConfig.setConfigSettingsAsync(configSettings)
         }
 
@@ -32,8 +34,12 @@ class ConfigurationServiceImpl @Inject constructor() : ConfigurationService {
     override val isShowTaskEditButtonConfig: Boolean
         get() = remoteConfig[SHOW_TASK_EDIT_BUTTON_KEY].asBoolean()
 
+        val yellowBackgroundColor: String
+        get() = remoteConfig[YELLOW_BACKGROUND_COLOR_KEY].asString()
+
     companion object {
         private const val SHOW_TASK_EDIT_BUTTON_KEY = "show_task_edit_button"
         private const val FETCH_CONFIG_TRACE = "fetchConfig"
+        private const val YELLOW_BACKGROUND_COLOR_KEY = "yellow_background_color"
     }
 }

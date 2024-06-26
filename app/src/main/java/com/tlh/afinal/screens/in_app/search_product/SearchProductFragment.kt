@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.tlh.afinal.adapter.ProductAdapter
 import com.tlh.afinal.adapter.SearchAdapter
 import com.tlh.afinal.databinding.FragmentSearchProductBinding
-import com.tlh.afinal.room.RoomViewModel
+import com.tlh.afinal.data.local.room.RoomViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -23,7 +23,7 @@ class SearchProductFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var s_adapter: SearchAdapter
     private val viewModel: SearchProductViewModel by viewModels()
-    private val r_viewModel: RoomViewModel by viewModels()
+
 
 
     override fun onCreateView(

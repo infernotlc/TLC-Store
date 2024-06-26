@@ -74,16 +74,3 @@ private fun CardEditor(
     }
 }
 
-@Composable
-@ExperimentalMaterialApi
-fun CardSelector(
-    @StringRes label: Int,
-    options: List<String>,
-    selection: String,
-    modifier: Modifier,
-    onNewValue: (String) -> Unit
-) {
-    Card(backgroundColor = MaterialTheme.colors.onPrimary, modifier = modifier) {
-        DropdownSelector(label, options, selection, Modifier.dropdownSelector(), onNewValue)
-    }
-}

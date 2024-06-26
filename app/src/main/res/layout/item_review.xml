@@ -10,17 +10,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
+        android:textColor="@color/white"
         android:text="Reviewer Name" />
 
     <TextView
         android:id="@+id/reviewTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="Review Text" />
 
     <TextView
-        android:id="@+id/reviewRatingTextView"
+        android:id="@+id/reviewDateTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Rating: 5" />
+        android:textColor="@color/white"
+        android:text="Review Text" />
+
+    <RatingBar
+        android:id="@+id/reviewRatingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/yellow"
+        android:hapticFeedbackEnabled="true" />
 </LinearLayout>

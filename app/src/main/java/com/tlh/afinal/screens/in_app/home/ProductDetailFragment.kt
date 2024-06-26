@@ -16,8 +16,8 @@ import com.tlh.afinal.adapter.ViewPagerAdapter
 import com.tlh.afinal.databinding.FragmentProductDetailBinding
 import com.tlh.afinal.model.in_app_service.Product
 import com.tlh.afinal.model.in_app_service.ProductViewModel
-import com.tlh.afinal.room.ProductRoom
-import com.tlh.afinal.room.RoomViewModel
+import com.tlh.afinal.data.local.room.ProductRoom
+import com.tlh.afinal.data.local.room.RoomViewModel
 import com.tlh.afinal.screens.in_app.search_product.SearchProductViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -84,7 +84,7 @@ class ProductDetailFragment : Fragment() {
     private fun bindProductDetails(product: Product) {
         binding.apply {
             title.text = product.title
-            price.text = "${product.price} USD"
+            price.text = "ONLY ${product.price} USD!!"
             discount.text = "${product.discountPercentage}% OFF"
             rating.text = "Rating: ${product.rating}"
             descriptionTextView.text = product.description

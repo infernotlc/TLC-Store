@@ -29,6 +29,12 @@ data class Profile(
     val crypto: Crypto,
     val role: String
 )
+data class EditProfile(
+    val id: Int,
+    val username: String,
+    val gender: String,
+    val email: String,
+)
 
 data class Hair(val color: String, val type: String)
 

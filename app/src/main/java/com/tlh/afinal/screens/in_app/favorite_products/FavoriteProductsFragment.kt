@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tlh.afinal.adapter.FavoriteAdapter
 import com.tlh.afinal.databinding.FragmentFavoriteProductsBinding
-import com.tlh.afinal.room.RoomViewModel
+import com.tlh.afinal.data.local.room.RoomViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 

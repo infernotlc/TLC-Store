@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.tlh.afinal.adapter.CategoryProductAdapter
 import com.tlh.afinal.databinding.FragmentCategoryProductsBinding
 import com.tlh.afinal.model.in_app_service.Product
-import com.tlh.afinal.model.in_app_service.ProductAPI
+import com.tlh.afinal.data.remote.ProductAPI
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject

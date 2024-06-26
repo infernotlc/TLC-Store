@@ -14,8 +14,8 @@ import com.bumptech.glide.Glide
 import com.tlh.afinal.R
 import com.tlh.afinal.databinding.ProductRecyclerRowBinding
 import com.tlh.afinal.model.in_app_service.Product
-import com.tlh.afinal.room.ProductRoom
-import com.tlh.afinal.room.RoomViewModel
+import com.tlh.afinal.data.local.room.ProductRoom
+import com.tlh.afinal.data.local.room.RoomViewModel
 import com.tlh.afinal.screens.in_app.home.HomeScreenFragment
 import com.tlh.afinal.screens.in_app.home.HomeScreenFragmentDirections
 
@@ -61,7 +61,7 @@ class ProductAdapter(
 
         holder.binding.apply {
             titleTextView.text = product.title
-            priceTextView.text = "${product.price} USD"
+            priceTextView.text = "Only ${product.price} USD!!"
             discountTextView.text = "%${product.discountPercentage} OFF"
             ratingTextView.text = product.rating.toString()
             Glide.with(holder.itemView).load(product.thumbnail).into(thumbnailImageView)

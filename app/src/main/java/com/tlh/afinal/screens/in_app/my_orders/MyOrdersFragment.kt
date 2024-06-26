@@ -35,11 +35,18 @@ class MyOrdersFragment : Fragment() {
         adapter = MyOrdersAdapter()
         binding.ordersRecyclerView.layoutManager = LinearLayoutManager(context)
         binding.ordersRecyclerView.adapter = adapter
-
+        binding.addOrderButton.setOnClickListener {
+            Toast.makeText(context, "You can choose from our various of products", Toast.LENGTH_SHORT).show()
+        }
         val userIds = resources.getStringArray(R.array.profile_numbers)
 
         binding.userSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
                 val selectedUserId = userIds[position].toInt()
                 viewModel.fetchOrdersForUser(selectedUserId)
             }
@@ -53,7 +60,8 @@ class MyOrdersFragment : Fragment() {
             if (orders.isNotEmpty()) {
                 adapter.orders = orders
             } else {
-                Toast.makeText(context, "No orders found for selected user", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "No orders found for selected user", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }

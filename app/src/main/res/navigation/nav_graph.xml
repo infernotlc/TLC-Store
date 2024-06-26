@@ -11,7 +11,11 @@
         tools:layout="@layout/fragment_home_screen" >
         <action
             android:id="@+id/action_homeScreenFragment_to_productDetailFragment"
-            app:destination="@id/productDetailFragment" />
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_bottom"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/productDetailFragment"
@@ -28,7 +32,9 @@
         tools:layout="@layout/fragment_categories" >
         <action
             android:id="@+id/action_categoriesFragment_to_categorieProductsFragment2"
-            app:destination="@id/categorieProductsFragment" />
+            app:destination="@id/categorieProductsFragment"
+            app:enterAnim="@anim/to_left"
+            app:popEnterAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/myOrdersFragment"
@@ -42,7 +48,11 @@
         tools:layout="@layout/fragment_favorite_products" >
         <action
             android:id="@+id/action_favoriteProductsFragment_to_productDetailFragment"
-            app:destination="@id/productDetailFragment" />
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/to_bottom"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_bottom"
+            app:popExitAnim="@anim/to_right" />
         <argument android:name="id"
             app:argType="integer" />
     </fragment>
@@ -53,7 +63,11 @@
         tools:layout="@layout/fragment_search_product" >
         <action
             android:id="@+id/action_searchProductFragment_to_productDetailFragment"
-            app:destination="@id/productDetailFragment" />
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_bottom"
+            app:popExitAnim="@anim/to_right" />
         <argument android:name="id"
             app:argType="integer" />
     </fragment>
@@ -61,7 +75,11 @@
         android:id="@+id/profileFragment"
         android:name="com.tlh.afinal.screens.in_app.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/categorieProductsFragment"
         android:name="com.tlh.afinal.screens.in_app.categories.CategoryProductsFragment"
@@ -69,7 +87,11 @@
         tools:layout="@layout/fragment_category_products" >
         <action
             android:id="@+id/action_categorieProductsFragment_to_productDetailFragment"
-            app:destination="@id/productDetailFragment" />
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/from_left"
+            app:popEnterAnim="@anim/to_bottom"
+            app:popExitAnim="@anim/to_right" />
         <argument android:name="slug"
             app:argType="string" />
     </fragment>
@@ -78,4 +100,13 @@
         android:name="com.tlh.afinal.screens.in_app.cart.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.tlh.afinal.screens.in_app.profile.EditProfileFragment"
+        android:label="EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>

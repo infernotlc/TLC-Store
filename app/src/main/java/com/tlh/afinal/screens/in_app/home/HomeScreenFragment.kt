@@ -16,7 +16,7 @@ import com.tlh.afinal.databinding.FragmentHomeScreenBinding
 import com.tlh.afinal.model.in_app_service.CartItemRequest
 import com.tlh.afinal.model.in_app_service.Product
 import com.tlh.afinal.model.in_app_service.ProductViewModel
-import com.tlh.afinal.room.RoomViewModel
+import com.tlh.afinal.data.local.room.RoomViewModel
 import com.tlh.afinal.screens.in_app.cart.CartViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -76,7 +76,7 @@ class HomeScreenFragment : Fragment() {
         lifecycleScope.launch {
             try {
                 val response = cartViewModel.addToCart(cartItem)
-                // Sepete ekleme işlemi tamamlandığında yapılacak işlemler
+                // when cart added completed after processes
                 Snackbar.make(binding.root, "${product.title} added to cart", Snackbar.LENGTH_LONG).show()
             } catch (e: Exception) {
                 Snackbar.make(binding.root, "Failed to add product to cart", Snackbar.LENGTH_LONG).show()

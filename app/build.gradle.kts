@@ -13,8 +13,8 @@ android {
     namespace = "com.tlh.afinal"
     compileSdk = 34
 
-    buildFeatures {
-        dataBinding = true
+    dataBinding {
+        enable = true
     }
 
     defaultConfig {
@@ -112,6 +112,8 @@ dependencies {
     //viewpager
     implementation("androidx.viewpager2:viewpager2:1.1.0")
 
+    //spinner customization
+    implementation ("com.github.skydoves:powerspinner:1.2.7")
 
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.2")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")

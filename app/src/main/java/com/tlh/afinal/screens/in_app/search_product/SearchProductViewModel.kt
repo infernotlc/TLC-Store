@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tlh.afinal.model.in_app_service.Product
-import com.tlh.afinal.model.in_app_service.ProductAPI
+import com.tlh.afinal.data.remote.ProductAPI
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

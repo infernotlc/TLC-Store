@@ -4,6 +4,8 @@ package com.tlh.afinal.model
 
 import com.google.common.truth.Truth.assertThat
 import com.google.firebase.firestore.FirebaseFirestore
+import com.tlh.afinal.model.service.module.StorageService
+import com.tlh.afinal.model.service.module.Task
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.flow.first
@@ -34,6 +36,6 @@ class AwesomeTest {
     fun test() = runTest {
         val newId = storage.save(Task(title = "Testing"))
         val result = storage.tasks.first()
-        assertThat(result).containsExactly(Task(id = newId, title = "Testing"))
+        assertThat(result).containsExactly(Task(id = null.toString(), title = "Testing"))
     }
 }

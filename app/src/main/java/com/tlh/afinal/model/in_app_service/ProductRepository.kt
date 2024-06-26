@@ -3,6 +3,8 @@ package com.tlh.afinal.model.in_app_service
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.tlh.afinal.data.remote.ProductAPI
+import com.tlh.afinal.data.remote.ProductAPIService
 import javax.inject.Inject
 
 class ProductRepository @Inject constructor(private val apiService: ProductAPIService, private val apiS: ProductAPI) {
