@@ -69,3 +69,7 @@
 - Animations
   
 ## 📽 Video 
+
+https://github.com/infernotlc/TLC-Store/assets/70065773/f6760210-b3cb-4a94-974a-c91ea6d7a2cd
+
+
